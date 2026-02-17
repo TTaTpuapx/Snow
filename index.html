@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowPeak — горнолыжный курорт</title>
+    <!-- Подключение шрифта Google Fonts (Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА (лого и навигация) -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">SnowPeak</a>
+            <button class="burger" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#about">О курорте</a></li>
+                    <li><a href="trails.html">Трассы</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ ЭКРАН (HERO) с видеофоном и большими кнопками -->
+    <section class="hero">
+        <!-- Видеофон (можно заменить на изображение, если нужно) -->
+        <video class="hero__video" autoplay muted loop playsinline>
+            <source src="photos/13993-253734384_medium.mp4" type="video/mp4">
+            <!-- Запасной вариант на случай, если видео не загрузится -->
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="container hero__container">
+            <h1 class="hero__title">SnowPeak</h1>
+            <p class="hero__subtitle">Почувствуй свободу на склонах Альп</p>
+            <div class="hero__buttons">
+                <a href="#trails" class="hero-btn">Трассы</a>
+                <a href="#services" class="hero-btn">Услуги</a>
+                <a href="#contact" class="hero-btn">Контакты</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- О КУРОРТЕ -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">О курорте SnowPeak</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>Расположенный в сердце Альп, SnowPeak предлагает незабываемый отдых для лыжников и сноубордистов всех уровней. Более 50 км трасс, современные подъёмники, уютные шале и разнообразные развлечения после катания.</p>
+                    <p>Высота курорта: 1800–2500 м. Сезон: декабрь – апрель.</p>
+                    <a href="#trails" class="btn btn--outline">Подробнее о трассах</a>
+                </div>
+                <div class="about__stats">
+                    <div class="stat">
+                        <span class="stat__number">50+</span>
+                        <span class="stat__label">км трасс</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">15</span>
+                        <span class="stat__label">подъёмников</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">1200</span>
+                        <span class="stat__label">м перепад</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ТРАССЫ И ПОДЪЁМНИКИ -->
+    <section id="trails" class="trails">
+        <div class="container">
+            <h2 class="section-title">Трассы и подъёмники</h2>
+            <div class="trails__grid">
+                <div class="trail-card">
+                    <img src="photos/1920x1920.jpg" alt="Синяя трасса">
+                    <h3>Синие трассы</h3>
+                    <p>Для начинающих и уверенных катальщиков. Широкие, ухоженные склоны.</p>
+                </div>
+                <div class="trail-card">
+                    <img src="photos/296403532049073.jpg" alt="Красная трасса">
+                    <h3>Красные трассы</h3>
+                    <p>Средний уровень сложности. Отличный карвинг и живописные виды.</p>
+                </div>
+                <div class="trail-card">
+                    <img src="photos/article-2068633-0F01C54800000578-346_964x639.jpg" alt="Черная трасса">
+                    <h3>Чёрные трассы</h3>
+                    <p>Для экспертов. Крутые склоны, нетронутый пухляк и экстремальные спуски.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ (прокат, обучение, кафе) -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Услуги курорта</h2>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">⛷️</div>
+                    <h3>Прокат снаряжения</h3>
+                    <p>Лыжи, сноуборды, ботинки, шлемы — все виды моделей. Выгодные тарифы.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🏂</div>
+                    <h3>Школа катания</h3>
+                    <p>Инструкторы с многолетним опытом. Индивидуальные и групповые занятия.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🍲</div>
+                    <h3>Горные кафе</h3>
+                    <p>Уютные рестораны с панорамным видом. Горячий шоколад, фондю и многое другое.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Фотогалерея</h2>
+            <div class="gallery__grid">
+                <div class="gallery-item"><img src="photos/вид на горы.jpg" alt="Вид на горы"></div>
+                <div class="gallery-item"><img src="photos/катание.jpg" alt="Катание"></div>
+                <div class="gallery-item"><img src="photos/закат в горах.jpg" alt="Закат в горах"></div>
+                <div class="gallery-item"><img src="photos/подъемник.jpg" alt="Подъёмник"></div>
+                <div class="gallery-item"><img src="photos/лыжник.jpg" alt="Лыжник"></div>
+                <div class="gallery-item"><img src="photos/горное озеро.jpg" alt="Горное озеро"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ И БРОНИРОВАНИЕ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Забронируйте отдых</h2>
+            <div class="contact__wrapper">
+                <form class="contact-form" id="bookingForm">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Телефон" required>
+                    <select required>
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option>Проживание в шале</option>
+                        <option>Ски-пасс</option>
+                        <option>Прокат снаряжения</option>
+                        <option>Обучение с инструктором</option>
+                    </select>
+                    <textarea rows="4" placeholder="Дополнительные пожелания"></textarea>
+                    <button type="submit" class="btn btn--primary">Отправить заявку</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Контакты</h3>
+                    <p><strong>Телефон:</strong> +7 999 133 99 34</p>
+                    <p><strong>Email:</strong> info@snowpeak.ch</p>
+                    <p><strong>Адрес:</strong> Verbier, Switzerland</p>
+                    <p><strong>Выполнил:</strong> Сафронов. К. А ИСТ-22-2</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SnowPeak. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Подключение скрипта -->
+    <script src="js/script.js"></script>
+</body>
+</html>
