@@ -1,34 +1,25 @@
-const menu = document.querySelector('.menu')
-const hamburger = document.querySelector('.hamburger')
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
 
-hamburger.addEventListener('click', ()=>{
-    menu.classList.toggle('active')
-    hamburger.classList.toggle('active')
-})
-<nav class="navbar">
-        <ul class="menu">
-            <li class="item">
-                <a href="#">Главная</a>
-            </li>
-            <li class="item">
-                <a href="#">Цены</a>
-            </li>
-            <li class="item">
-                <a href="#">Портфолио</a>
-            </li>
-            <li class="item">
-                <a href="#">О заказе</a>
-            </li>
-            <li class="item">
-                <a href="#">Об оплате</a>
-            </li>
-            <li class="item">
-                <a href="#">О нас</a>
-            </li>
-        </ul>
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </nav>
+if (burger && nav) {
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav--active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav__list a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('nav--active');
+        });
+    });
+}
+
+const bookingForm = document.getElementById('bookingForm');
+if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+        bookingForm.reset();
+    });
+
+}
