@@ -569,5 +569,11 @@ h1, h2, h3 {
         max-height: 400px;
     }
 }
+.burger {
+    position: relative;
+    z-index: 1001;
+}
+
+
 
 
