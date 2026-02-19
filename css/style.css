@@ -67,12 +67,11 @@ h1, h2, h3 {
     font-size: 2rem;
     font-weight: 800;
     background: linear-gradient(135deg, #3b8d99, #6dd5ed);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
 
-/* Навигация для десктопа */
 .nav__list {
     display: flex;
     gap: 2rem;
@@ -108,7 +107,6 @@ h1, h2, h3 {
     width: 100%;
 }
 
-/* Бургер-кнопка (скрыта на десктопе) */
 .burger {
     display: none;
     flex-direction: column;
@@ -119,7 +117,6 @@ h1, h2, h3 {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
 }
 
 .burger span {
@@ -130,45 +127,45 @@ h1, h2, h3 {
     transition: all 0.3s linear;
 }
 
-/* Анимация бургера при открытом меню */
-.burger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.burger.active span:nth-child(2) {
-    opacity: 0;
-}
-.burger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+.gallery {
+    padding: 100px 0;
+    background: #f9fafb;
 }
 
-/* Затемнение фона и запрет прокрутки */
-body.menu-open {
-    overflow: hidden;
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-body.menu-open::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
+.gallery-item {
+    aspect-ratio: 4 / 3;           
+    overflow: hidden;               
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    transition: opacity 0.3s;
+    object-fit: cover;              
+    transition: transform 0.5s ease;
 }
 
-/* Hero секция (без изменений) */
+.gallery-item:hover img {
+    transform: scale(1.1);           
+}
+
 .hero {
     position: relative;
     height: 100vh;
     min-height: 700px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;        
+    justify-content: center;    
     text-align: center;
     color: #fff;
-    overflow: hidden;
+    overflow: hidden;           
 }
 
 .hero__video {
@@ -177,7 +174,7 @@ body.menu-open::after {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;          
     z-index: 0;
 }
 
@@ -187,14 +184,14 @@ body.menu-open::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3); 
     z-index: 1;
 }
 
 .hero__container {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 100%;                
     padding: 0 20px;
 }
 
@@ -209,7 +206,7 @@ body.menu-open::after {
 
 .hero__subtitle {
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;        
     font-weight: 300;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     animation: fadeInUp 1s ease-out 0.2s both;
@@ -218,7 +215,7 @@ body.menu-open::after {
 .hero__buttons {
     display: flex;
     gap: 30px;
-    justify-content: center;
+    justify-content: center;    
     flex-wrap: wrap;
     animation: fadeInUp 1s ease-out 0.4s both;
 }
@@ -259,7 +256,17 @@ body.menu-open::after {
     }
 }
 
-/* Страницы (без изменений) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .page-header {
     background: linear-gradient(135deg, #3b8d99, #6dd5ed);
     color: #fff;
@@ -354,35 +361,6 @@ body.menu-open::after {
 
 .service-card p {
     color: #6b7280;
-}
-
-.gallery {
-    padding: 100px 0;
-    background: #f9fafb;
-}
-
-.gallery__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
 }
 
 .contact {
@@ -497,48 +475,7 @@ body.menu-open::after {
     text-align: center;
 }
 
-/* ========== МОБИЛЬНЫЕ СТИЛИ (до 768px) ========== */
 @media (max-width: 768px) {
-    .burger {
-        display: flex; /* Показываем бургер */
-    }
-
-    /* Меню по умолчанию скрыто за левым краем */
-    .nav {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background: linear-gradient(135deg, #3b8d99, #6dd5ed);
-        transition: left 0.4s ease;
-        z-index: 1000;
-        padding: 40px 0;
-        overflow-y: auto;
-    }
-
-    /* При добавлении класса active — показываем меню */
-    .nav.active {
-        left: 0;
-    }
-
-    .nav__list {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .nav__list a {
-        color: white;
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-
-    .nav__list a::after {
-        background: white;
-    }
-
-    /* Корректировка остальных элементов */
     .section-title {
         font-size: 2rem;
     }
@@ -555,6 +492,33 @@ body.menu-open::after {
         font-size: 1.2rem;
         padding: 15px 30px;
         min-width: 160px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+    }
+
+    .nav--active {
+        max-height: 400px;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        align-items: center;
     }
 
     .trails__grid,
