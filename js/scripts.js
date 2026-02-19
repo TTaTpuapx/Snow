@@ -1,42 +1,34 @@
-// Бургер-меню
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav');
+const menu = document.querySelector('.menu')
+const hamburger = document.querySelector('.hamburger')
 
-if (burger && nav) {
-    // Открытие/закрытие по клику на бургер
-    burger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        nav.classList.toggle('nav--active');
-        burger.classList.toggle('burger--active');
-        document.body.classList.toggle('menu-open'); // запрет прокрутки и затемнение
-    });
-
-    // Закрытие при клике на любую ссылку в меню
-    const navLinks = document.querySelectorAll('.nav__list a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('nav--active');
-            burger.classList.remove('burger--active');
-            document.body.classList.remove('menu-open');
-        });
-    });
-
-    // Закрытие при клике вне меню и бургера
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !burger.contains(e.target)) {
-            nav.classList.remove('nav--active');
-            burger.classList.remove('burger--active');
-            document.body.classList.remove('menu-open');
-        }
-    });
-}
-
-// Обработка формы бронирования
-const bookingForm = document.getElementById('bookingForm');
-if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
-        bookingForm.reset();
-    });
-}
+hamburger.addEventListener('click', ()=>{
+    menu.classList.toggle('active')
+    hamburger.classList.toggle('active')
+})
+<nav class="navbar">
+        <ul class="menu">
+            <li class="item">
+                <a href="#">Главная</a>
+            </li>
+            <li class="item">
+                <a href="#">Цены</a>
+            </li>
+            <li class="item">
+                <a href="#">Портфолио</a>
+            </li>
+            <li class="item">
+                <a href="#">О заказе</a>
+            </li>
+            <li class="item">
+                <a href="#">Об оплате</a>
+            </li>
+            <li class="item">
+                <a href="#">О нас</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
