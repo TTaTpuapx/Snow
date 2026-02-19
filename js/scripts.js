@@ -13,11 +13,6 @@ if (burger && nav) {
         });
     });
 }
- let hamburger = document.getElementById('hamburger');
-
-let headerLinks = document.querySelector('.header_links');
-
-hamburger.addEventListener('click', function() { button.classList.toggle('button-open'); headerLinks.classList.toggle('links-open'); }); 
 const bookingForm = document.getElementById('bookingForm');
 if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
@@ -26,4 +21,5 @@ if (bookingForm) {
         bookingForm.reset();
     });
 }
+
 
