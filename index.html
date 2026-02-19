@@ -1,8 +1,105 @@
-<p>Для экспертов. Крутые склоны, нетронутый пухляк и экстремальные спуски.</p>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowPeak — горнолыжный курорт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">SnowPeak</a>
+            <button class="burger" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#about">О курорте</a></li>
+                    <li><a href="trails.html">Трассы</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <!-- видеофон -->
+        <video class="hero__video" autoplay muted loop playsinline>
+            <source src="photos/13993-253734384_medium.mp4" type="video/mp4">
+            <!-- если видео не загрузится -->
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="container hero__container">
+            <h1 class="hero__title">SnowPeak</h1>
+            <p class="hero__subtitle">Почувствуй свободу на склонах Альп</p>
+            <div class="hero__buttons">
+                <a href="#trails" class="hero-btn">Трассы</a>
+                <a href="#services" class="hero-btn">Услуги</a>
+                <a href="#contact" class="hero-btn">Контакты</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- о курорте -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">О курорте SnowPeak</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>Расположенный в сердце Альп, SnowPeak предлагает незабываемый отдых для лыжников и сноубордистов всех уровней. Более 50 км трасс, современные подъёмники, уютные шале и разнообразные развлечения после катания.</p>
+                    <p>Высота курорта: 1800–2500 м. Сезон: декабрь – апрель.</p>
+                    <a href="#trails" class="btn btn--outline">Подробнее о трассах</a>
+                </div>
+                <div class="about__stats">
+                    <div class="stat">
+                        <span class="stat__number">50+</span>
+                        <span class="stat__label">км трасс</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">15</span>
+                        <span class="stat__label">подъёмников</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">1200</span>
+                        <span class="stat__label">м перепад</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Ттрассы и подъемники -->
+    <section id="trails" class="trails">
+        <div class="container">
+            <h2 class="section-title">Трассы и подъёмники</h2>
+            <div class="trails__grid">
+                <div class="trail-card">
+                    <img src="photos/1920x1920.jpg" alt="Синяя трасса">
+                    <h3>Синие трассы</h3>
+                    <p>Для начинающих и уверенных катальщиков. Широкие, ухоженные склоны.</p>
+                </div>
+                <div class="trail-card">
+                    <img src="photos/296403532049073.jpg" alt="Красная трасса">
+                    <h3>Красные трассы</h3>
+                    <p>Средний уровень сложности. Отличный карвинг и живописные виды.</p>
+                </div>
+                <div class="trail-card">
+                    <img src="photos/article-2068633-0F01C54800000578-346_964x639.jpg" alt="Черная трасса">
+                    <h3>Чёрные трассы</h3>
+                    <p>Для экспертов. Крутые склоны, нетронутый пухляк и экстремальные спуски.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- услуги -->
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Услуги курорта</h2>
@@ -25,6 +122,8 @@
             </div>
         </div>
     </section>
+
+    <!-- галерея -->
     <section id="gallery" class="gallery">
         <div class="container">
             <h2 class="section-title">Фотогалерея</h2>
@@ -38,6 +137,8 @@
             </div>
         </div>
     </section>
+
+    <!-- контакты -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Забронируйте отдых</h2>
@@ -72,13 +173,13 @@
         </div>
     </section>
 
+    <!-- подвал -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 SnowPeak. Все права защищены. Сафронов. К. А</p>
+            <p>&copy; 2025 SnowPeak. Все права защищены.</p>
         </div>
     </footer>
-
+    
     <script src="js/script.js"></script>
 </body>
-
 </html>
