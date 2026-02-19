@@ -130,7 +130,6 @@ h1, h2, h3 {
     transition: all 0.3s linear;
 }
 
-/* Анимация бургера при открытом меню - используем класс active */
 .burger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -141,7 +140,6 @@ h1, h2, h3 {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Затемнение фона и запрет прокрутки */
 body.menu-open {
     overflow: hidden;
 }
@@ -158,7 +156,6 @@ body.menu-open::after {
     transition: opacity 0.3s;
 }
 
-/* Hero секция */
 .hero {
     position: relative;
     height: 100vh;
@@ -495,14 +492,11 @@ body.menu-open::after {
     padding: 30px 0;
     text-align: center;
 }
-
-/* ========== МОБИЛЬНЫЕ СТИЛИ (до 768px) ========== */
 @media (max-width: 768px) {
     .burger {
         display: flex;
     }
 
-    /* Меню скрыто за левым краем */
     .nav {
         position: fixed;
         top: 80px;
@@ -516,7 +510,6 @@ body.menu-open::after {
         overflow-y: auto;
     }
 
-    /* Класс для открытого меню - используем active */
     .nav.active {
         left: 0;
     }
@@ -537,7 +530,6 @@ body.menu-open::after {
         background: white;
     }
 
-    /* Корректировка остальных элементов */
     .section-title {
         font-size: 2rem;
     }
@@ -586,3 +578,4 @@ body.menu-open::after {
         gap: 15px;
     }
 }
+
