@@ -54,8 +54,6 @@ h1, h2, h3 {
     backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: 1000;
-    /* Добавляем relative для позиционирования выезжающего меню */
-    position: relative;
 }
 
 .header__container {
@@ -63,6 +61,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    position: relative;
 }
 
 .logo {
@@ -72,6 +71,7 @@ h1, h2, h3 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
+    z-index: 1001;
 }
 
 .nav__list {
@@ -130,14 +130,14 @@ h1, h2, h3 {
     transition: all 0.3s linear;
 }
 
-/* Анимация бургера при открытом меню */
-.burger--active span:nth-child(1) {
+/* Анимация бургера при открытом меню - используем класс active */
+.burger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
-.burger--active span:nth-child(2) {
+.burger.active span:nth-child(2) {
     opacity: 0;
 }
-.burger--active span:nth-child(3) {
+.burger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
@@ -496,61 +496,93 @@ body.menu-open::after {
     text-align: center;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.navbar{
-    width: 100%;
-    height: 50px;
-    background-color: rgb(58, 58, 58);
+/* ========== МОБИЛЬНЫЕ СТИЛИ (до 768px) ========== */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    /* Меню скрыто за левым краем */
+    .nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: linear-gradient(135deg, #3b8d99, #6dd5ed);
+        transition: left 0.4s ease;
+        z-index: 1000;
+        padding: 40px 0;
+        overflow-y: auto;
+    }
+
+    /* Класс для открытого меню - используем active */
+    .nav.active {
+        left: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .nav__list a {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .nav__list a::after {
+        background: white;
+    }
+
+    /* Корректировка остальных элементов */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-btn {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        min-width: 160px;
+    }
+
+    .trails__grid,
+    .services__grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact__wrapper {
+        flex-direction: column;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
+    }
 }
 
-li{
-    padding: 15px;
-    font-size: 20px;
-}
-a{color: white;}
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 2.8rem;
+    }
 
-.menu{
-    position: absolute;
-    left: -100%;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    transition: 0.7s;
-}
+    .hero-btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+        min-width: 140px;
+    }
 
-.menu.active{
-    left: 0;
-}
-
-.hamburger{
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 5px;
-    z-index: 1;
-}
-
-.bar{
-    margin: 5px auto;
-    background-color: red;
-    width: 25px;
-    height: 3px;
-    display: block;
-    transition: 0.3s;
-}
-
-.hamburger.active .bar:nth-child(2){
-    opacity: 0;
-}
-.hamburger.active .bar:nth-child(1){
-    transform: translateY(8px)rotate(45deg);
-}
-.hamburger.active .bar:nth-child(3){
-    transform: translateY(-8px)rotate(-45deg);
+    .hero__buttons {
+        gap: 15px;
+    }
 }
