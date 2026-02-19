@@ -8,23 +8,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container header__container">
-            <a href="#" class="logo">SnowPeak</a>
-            <button class="burger" aria-label="Открыть меню">
-                <span></span><span></span><span></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="#about">О курорте</a></li>
-                    <li><a href="trails.html">Трассы</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="#gallery">Галерея</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="header bg-white shadow-sm sticky-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light py-3 px-0">
+      <!-- Логотип (ваш) -->
+      <a class="navbar-brand fw-bold fs-2" href="index.html" style="background: linear-gradient(135deg, #3b8d99, #6dd5ed); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SnowPeak</a>
+
+      <!-- Кнопка-бургер (появится на мобильных) -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Само меню (будет сворачиваться) -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-2 gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="#about">О курорте</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="trails.html">Трассы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="services.html">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="#gallery">Галерея</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="contact.html">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
     <section class="hero">
         <video class="hero__video" autoplay muted loop playsinline>
             <source src="photos/13993-253734384_medium.mp4" type="video/mp4">
@@ -167,4 +184,5 @@
 </body>
 
 </html>
+
 
