@@ -1,38 +1,46 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты — SnowPeak</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header class="header">
-        <div class="container header__container">
-            <a href="index.html" class="logo">SnowPeak</a>
-            <button class="burger" aria-label="Открыть меню">
-                <span></span><span></span><span></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="trails.html">Трассы</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="contact.html" class="active">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Свяжитесь с нами</h1>
+<p>Для экспертов. Крутые склоны, нетронутый пухляк и экстремальные спуски.</p>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section class="contact">
+    <section id="services" class="services">
         <div class="container">
+            <h2 class="section-title">Услуги курорта</h2>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">⛷️</div>
+                    <h3>Прокат снаряжения</h3>
+                    <p>Лыжи, сноуборды, ботинки, шлемы — все виды моделей. Выгодные тарифы.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🏂</div>
+                    <h3>Школа катания</h3>
+                    <p>Инструкторы с многолетним опытом. Индивидуальные и групповые занятия.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🍲</div>
+                    <h3>Горные кафе</h3>
+                    <p>Уютные рестораны с панорамным видом. Горячий шоколад, фондю и многое другое.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Фотогалерея</h2>
+            <div class="gallery__grid">
+                <div class="gallery-item"><img src="photos/вид на горы.jpg" alt="Вид на горы"></div>
+                <div class="gallery-item"><img src="photos/катание.jpg" alt="Катание"></div>
+                <div class="gallery-item"><img src="photos/закат в горах.jpg" alt="Закат в горах"></div>
+                <div class="gallery-item"><img src="photos/подъемник.jpg" alt="Подъёмник"></div>
+                <div class="gallery-item"><img src="photos/лыжник.jpg" alt="Лыжник"></div>
+                <div class="gallery-item"><img src="photos/горное озеро.jpg" alt="Горное озеро"></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Забронируйте отдых</h2>
             <div class="contact__wrapper">
                 <form class="contact-form" id="bookingForm">
                     <input type="text" placeholder="Ваше имя" required>
@@ -60,9 +68,6 @@
                         <a href="#" aria-label="YouTube">▶️</a>
                     </div>
                 </div>
-            </div>
-            <div style="margin-top: 40px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.388891692242!2d7.226508315560959!3d46.09268697911365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478f0d6b1f1b1b1b%3A0x9e8b3b3b3b3b3b3b!2sVerbier!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
