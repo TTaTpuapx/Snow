@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="header">
+    <header class="header">
         <div class="container header__container">
-            <a href="index.html" class="logo">SnowPeak</a>
+            <a href="#" class="logo">SnowPeak</a>
             <button class="burger" aria-label="Открыть меню">
                 <span></span><span></span><span></span>
             </button>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li><a href="trails.html" class="active">Трассы</a></li>
+                    <li><a href="#about">О курорте</a></li>
+                    <li><a href="trails.html">Трассы</a></li>
                     <li><a href="services.html">Услуги</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
                     <li><a href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
@@ -81,90 +83,3 @@
                 <div class="trail-card">
                     <img src="photos/article-2068633-0F01C54800000578-346_964x639.jpg" alt="Черная трасса">
                     <h3>Чёрные трассы</h3>
-                    <p>Для экспертов. Крутые склоны, нетронутый пухляк и экстремальные спуски.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Услуги курорта</h2>
-            <div class="services__grid">
-                <div class="service-card">
-                    <div class="service-card__icon">⛷️</div>
-                    <h3>Прокат снаряжения</h3>
-                    <p>Лыжи, сноуборды, ботинки, шлемы — все виды моделей. Выгодные тарифы.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">🏂</div>
-                    <h3>Школа катания</h3>
-                    <p>Инструкторы с многолетним опытом. Индивидуальные и групповые занятия.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">🍲</div>
-                    <h3>Горные кафе</h3>
-                    <p>Уютные рестораны с панорамным видом. Горячий шоколад, фондю и многое другое.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Фотогалерея</h2>
-            <div class="gallery__grid">
-                <div class="gallery-item"><img src="photos/вид на горы.jpg" alt="Вид на горы"></div>
-                <div class="gallery-item"><img src="photos/катание.jpg" alt="Катание"></div>
-                <div class="gallery-item"><img src="photos/закат в горах.jpg" alt="Закат в горах"></div>
-                <div class="gallery-item"><img src="photos/подъемник.jpg" alt="Подъёмник"></div>
-                <div class="gallery-item"><img src="photos/лыжник.jpg" alt="Лыжник"></div>
-                <div class="gallery-item"><img src="photos/горное озеро.jpg" alt="Горное озеро"></div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Забронируйте отдых</h2>
-            <div class="contact__wrapper">
-                <form class="contact-form" id="bookingForm">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Телефон" required>
-                    <select required>
-                        <option value="" disabled selected>Выберите услугу</option>
-                        <option>Проживание в шале</option>
-                        <option>Ски-пасс</option>
-                        <option>Прокат снаряжения</option>
-                        <option>Обучение с инструктором</option>
-                    </select>
-                    <textarea rows="4" placeholder="Дополнительные пожелания"></textarea>
-                    <button type="submit" class="btn btn--primary">Отправить заявку</button>
-                </form>
-                <div class="contact-info">
-                    <h3>Контакты</h3>
-                    <p><strong>Телефон:</strong> +7 999 133 99 34</p>
-                    <p><strong>Email:</strong> info@snowpeak.ch</p>
-                    <p><strong>Адрес:</strong> Verbier, Switzerland</p>
-                    <p><strong>Выполнил:</strong> Сафронов. К. А ИСТ-22-2</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="YouTube">▶️</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 SnowPeak. Все права защищены. Сафронов. К. А</p>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-
-</html>
-
-
-
