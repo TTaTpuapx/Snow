@@ -13,6 +13,10 @@ if (burger && nav) {
         });
     });
 }
+burger.addEventListener('click', () => {
+    nav.classList.toggle('nav--active');
+    burger.classList.toggle('burger--active'); // добавили
+});
 
 const bookingForm = document.getElementById('bookingForm');
 if (bookingForm) {
@@ -23,3 +27,4 @@ if (bookingForm) {
     });
 
 }
+
